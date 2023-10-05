@@ -9,42 +9,57 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
+          
 
-            <Image
-                Source="dotnet_bot.png" x:Name="Image"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HorizontalOptions="Center" Aspect="AspectFill"/>
+                    <Grid>
+                <Image
+                    Source="dotnet_bot.svg" x:Name="Image"
+                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="Fill" />
+                <!-- nested grid. OR StackLayout, etc. -->
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-            <Button
-                x:Name="Green"
-                Text="{x:Static res:AppResources.Green}"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="Green_OnClicked"
-                HorizontalOptions="Center" />
-            <Button
-                x:Name="Red"
-                Text="{x:Static res:AppResources.Red}"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="Red_OnClicked"
-                HorizontalOptions="Center" />
-            <Button
-                x:Name="Blue"
-                Text="{x:Static res:AppResources.Blue}"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="Blue_OnClicked"
-                HorizontalOptions="Center" />
+                <Grid VerticalOptions="Center" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1"
+                        Text="Welcome to .NET Multi-platform App UI"
+                        SemanticProperties.HeadingLevel="Level2"
+                        SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                        FontSize="18"
+                        HorizontalOptions="Center" />
+                    <Button  Grid.Row="2"
+                             x:Name="Green"
+                             Text="{x:Static res:AppResources.Green}"
+                             SemanticProperties.Hint="Counts the number of times you click"
+                             Clicked="Green_OnClicked"
+                             HorizontalOptions="Center" ImageSource="sde.svg" />
+                    <Button  Grid.Row="3" 
+                             x:Name="Red"
+                             Text="{x:Static res:AppResources.Red}"
+                             SemanticProperties.Hint="Counts the number of times you click"
+                             Clicked="Red_OnClicked"
+                             HorizontalOptions="Center" ImageSource="dsa.svg"/>
+                    <Button Grid.Row="4"
+                            x:Name="Blue"
+                            Text="{x:Static res:AppResources.Blue}"
+                            SemanticProperties.Hint="Counts the number of times you click"
+                            Clicked="Blue_OnClicked"
+                            HorizontalOptions="Center" ImageSource="dsdf.svg"/>
 
-            <Label x:Name="Label"
-                   IsVisible="False"
-                   SemanticProperties.HeadingLevel="Level1"
-                   FontSize="32"
-                   HorizontalOptions="Center" />
+                    <Label x:Name="Label"  Grid.Row="5"
+                           IsVisible="False"
+                           SemanticProperties.HeadingLevel="Level1"
+                           FontSize="32"
+                           HorizontalOptions="Center" />
+                </Grid>
+            </Grid>
+           
 
         </VerticalStackLayout>
     </ScrollView>

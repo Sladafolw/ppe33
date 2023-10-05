@@ -16,22 +16,16 @@ public partial class MainPage : ContentPage
     {
         if (DeviceDisplay.MainDisplayInfo.Orientation == DisplayOrientation.Landscape)
         {
-            Image.Source = "ss1.svg";
-            const double aspectRatio = 1600 / 1441.0; // Aspect ratio of the original image
-            Image.WidthRequest = Math.Max(DeviceDisplay.Current.MainDisplayInfo.Height * aspectRatio, DeviceDisplay.Current.MainDisplayInfo.Width);
-
-
+            Image.Source = "dotnet_bot.svg";
 
         }
         if (DeviceDisplay.MainDisplayInfo.Orientation == DisplayOrientation.Portrait)
         {
-            Image.Source = "ss2.svg";
-            const double aspectRatio = 1600 / 1441.0; // Aspect ratio of the original image
-            Image.WidthRequest = Math.Max(DeviceDisplay.Current.MainDisplayInfo.Height * aspectRatio, DeviceDisplay.Current.MainDisplayInfo.Width);
+            Image.Source = "dotnet_bot.svg";
 
         }
     }
-
+    const double aspectRatio = 419 / 519.0; //
     private void Green_OnClicked(object sender, EventArgs e)
     {
         BackgroundColor = Colors.Green;
