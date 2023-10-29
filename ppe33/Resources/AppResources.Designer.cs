@@ -88,6 +88,15 @@ namespace ppe33.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Картинка.
+        /// </summary>
+        internal static string Image {
+            get {
+                return ResourceManager.GetString("Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Красный.
         /// </summary>
         internal static string Red {

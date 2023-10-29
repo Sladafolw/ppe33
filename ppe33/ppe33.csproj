@@ -52,9 +52,13 @@
 	  <None Remove="Resources\Images\dsa.svg" />
 	  <None Remove="Resources\Images\dsdf.svg" />
 	  <None Remove="Resources\Images\sde.svg" />
+	  <None Remove="Resources\Images\sdsa.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="MetroLog.Maui" Version="2.1.0" />
+		<PackageReference Include="MetroLog.Net6" Version="2.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 

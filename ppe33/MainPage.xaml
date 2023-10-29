@@ -9,9 +9,9 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-          
 
-                    <Grid>
+            <Switch IsToggled="{Binding IsShakeEnabled}"/>
+            <Grid>
                 <Image
                     Source="dotnet_bot.svg" x:Name="Image"
                     SemanticProperties.Description="Cute dot net bot waving hi to you!"
@@ -20,6 +20,7 @@
 
                 <Grid VerticalOptions="Center" >
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
@@ -51,8 +52,13 @@
                             SemanticProperties.Hint="Counts the number of times you click"
                             Clicked="Blue_OnClicked"
                             HorizontalOptions="Center" ImageSource="dsdf.svg"/>
-
-                    <Label x:Name="Label"  Grid.Row="5"
+                    <Button  Grid.Row="5" 
+                             x:Name="Im"
+                             Text="{x:Static res:AppResources.Image}"
+                             SemanticProperties.Hint="Counts the number of times you click"
+                             Clicked="Im_Clicked"
+                             HorizontalOptions="Center" ImageSource="dsdf.svg"/>
+                    <Label x:Name="Label"  Grid.Row="6"
                            IsVisible="False"
                            SemanticProperties.HeadingLevel="Level1"
                            FontSize="32"

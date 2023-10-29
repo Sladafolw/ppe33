@@ -126,6 +126,9 @@
   <data name="Hello" xml:space="preserve">
     <value>Hello</value>
   </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
   <data name="Red" xml:space="preserve">
     <value>Red</value>
   </data>
